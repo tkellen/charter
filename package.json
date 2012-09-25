@@ -36,13 +36,9 @@
     "coffee-script": "*"
   },
   "keywords": [
-    "orm",
-    "persistence layer",
-    "relations",
-    "relational",
-    "json",
-    "many-to-one",
-    "one-to-many",
-    "many-to-many"
+    "finite state machine",
+    "state chart",
+    "statemachine",
+    "routing"
   ]
 }
