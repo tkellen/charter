@@ -34,7 +34,6 @@ define (require) ->
             edit: State.create(stateEvents)
             show: State.create(stateEvents)
           })
-
         })
       window.machine = @machine
 
@@ -99,6 +98,17 @@ define (require) ->
         expect(@transition.enterStates[0]).toEqual(@machine.states.root.states.comments)
         expect(@transition.enterStates[1]).toEqual(@machine.states.root.states.comments.states.show)
 
+      it 'should accept relative paths', ->
+        transition = @machine.getTransitions('comments')
+        expect(transition.enterStates[transition.enterStates.length-1]).toEqual(@machine.states.root.states.comments)
+
+      it 'should accept absolute paths', ->
+        transition = @machine.getTransitions('root.comments')
+        expect(transition.exitStates[0]).toEqual(@machine.states.root.states.post)
+        expect(transition.exitStates[1]).toEqual(@machine.states.root.states.post.states.show)
+        expect(@transition.enterStates[0]).toEqual(@machine.states.root.states.comments)
+        expect(@transition.enterStates[1]).toEqual(@machine.states.root.states.comments.states.show)
+
     describe 'transitionTo', ->
 
       beforeEach ->
@@ -124,4 +134,11 @@ define (require) ->
         @machine.transitionTo('root.comments')
         expect(@postState.exited).toEqual(1)
         expect(@postCreateState.exited).toEqual(1)
+
+      it 'should transition to the deepest initialState', ->
+        machine = Machine.create
+                    initialState: 'root'
+                    root: State.create
+                      start: State.create()
+        expect(machine.currentState).toEqual(machine.states.root.states.start)
 
