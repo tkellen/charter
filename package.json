@@ -1,6 +1,6 @@
 {
   "name": "charter",
-  "description": "Finite State Charts with Routing",
+  "description": "Finite State Machine with Routing",
   "version": "0.1.0",
   "homepage": "https://github.com/tkellen/charter",
   "author": {
@@ -37,8 +37,9 @@
   },
   "keywords": [
     "finite state machine",
+    "finite state chart",
+    "state machine",
     "state chart",
-    "statemachine",
     "routing"
   ]
 }

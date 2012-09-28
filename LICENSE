@@ -1,7 +1,8 @@
 Copyright (c) 2012 Tyler Kellen <http://goingslowly.com>
 
-Based on Ember.js 1.0.pre, Copyright (c) 2012 Yehuda Katz, Tom Dale,
-Charles Jolley and Ember.js contributors
+State Machine & Router Based on Ember.js 1.0.pre
+
+Copyright (c) 2012 Yehuda Katz, Tom Dale, Charles Jolley and Ember.js contributors
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
