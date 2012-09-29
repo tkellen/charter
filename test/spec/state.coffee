@@ -7,8 +7,13 @@ define (require) ->
     describe 'create', ->
 
       it 'should return a state object', ->
-        store = State.create({name:'test'})
-        expect(store.type).toEqual('charter/state')
+        state = State.create({name:'test'})
+        expect(state.type).toEqual('charter/state')
+
+      it 'should combine all arguments into a single configuration object', ->
+        state = State.create({first:'test'},{second:'test'})
+        expect(state.first).toBeDefined()
+        expect(state.second).toBeDefined()
 
     describe 'isLeaf', ->
 
