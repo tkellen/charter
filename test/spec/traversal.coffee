@@ -1,12 +1,13 @@
 define (require) ->
 
   Traversal = require('charter/traversal')
+  Util = require('charter/util')
 
   describe 'Traversal', ->
 
    beforeEach ->
      receiver = ->
-     Traversal.mixin(receiver)
+     receiver.prototype = Util.extend({}, Traversal)
 
      @test = new receiver()
      @test.namespace =
