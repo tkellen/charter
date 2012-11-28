@@ -14,7 +14,7 @@ define (require) ->
        leaf1:
          ['hi','there']
        leaf2:
-         computed: Traversal.computed ->
+         computed: Util.computed ->
            'dude'
 
    it 'should return the entire context when no lookup is defined', ->

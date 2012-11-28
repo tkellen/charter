@@ -19,12 +19,12 @@ define (require) ->
 
       it 'should be true if state has no children', ->
         state = State.create()
-        expect(state.isLeaf).toBe(true)
+        expect(state.isLeaf()).toBe(true)
 
       it 'should be false if state has children', ->
         state = State.create
           child: State.create()
-        expect(state.isLeaf).toBe(false)
+        expect(state.isLeaf()).toBe(false)
 
     describe 'path', ->
 

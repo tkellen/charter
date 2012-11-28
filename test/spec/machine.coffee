@@ -74,7 +74,6 @@ define (require) ->
           enteredOrder = 0
           exitedOrder = 0
 
-
       @root = @machine.states.root
       @comments = @root.states.comments
       @commentsShow = @comments.states.show
