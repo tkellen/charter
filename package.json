@@ -24,16 +24,13 @@
   "scripts": {
     "test": "grunt test"
   },
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.1.0",
-    "grunt-contrib-requirejs": "git://github.com/gruntjs/grunt-contrib-requirejs.git#devel",
-    "grunt-contrib-compress": "git://github.com/gruntjs/grunt-contrib-compress.git#devel",
-    "grunt-contrib-yuidoc": "git://github.com/gruntjs/grunt-contrib-yuidoc.git#devel",
-    "grunt": "~0.4.0",
-    "grunt-cli": "~0.1.1"
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-requirejs": "~0.4.3",
+    "grunt-contrib-compress": "~0.8.0",
+    "grunt-contrib-yuidoc": "^0.5.2",
+    "grunt": "^0.4.4"
   },
   "keywords": [
     "finite state machine",
